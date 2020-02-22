@@ -15,10 +15,11 @@ public class TablaConversion {
         double temperatura = temperaturaInicio;
 
         while (temperatura <= temperaturaFinal) {
+            sb.append(String.format("%.2f", temperatura) + "\t");
             for (Conversor conversor: conversores) {
-                sb.append(temperatura + "\t");
-                sb.append(conversor.convierte(temperatura) + "\n");
+                sb.append(String.format("%.2f",conversor.convierte(temperatura)) + "\t");
             }
+            sb.append("\n");
             temperatura += salto;
         }
 
