@@ -17,8 +17,9 @@ public class TablaConversion {
         while (temperatura <= temperaturaFinal) {
             for (Conversor conversor: conversores) {
                 sb.append(temperatura + "\t");
-                sb.append(conversor.convierte(temperatura) + "\b");
+                sb.append(conversor.convierte(temperatura) + "\n");
             }
+            temperatura += salto;
         }
 
         return sb.toString();
