@@ -1,9 +1,11 @@
+package escala;
+
 public class EscalaLineal {
     final double temperaturaCongelacionAgua;
     final double temperturaEbullicionAgua;
 
     public EscalaLineal(final double temperaturaCongelacionAgua, final double temperturaEbullicionAgua) {
-        this.temperaturaCongelacionAgua = temperturaEbullicionAgua;
+        this.temperaturaCongelacionAgua = temperaturaCongelacionAgua;
         this.temperturaEbullicionAgua = temperturaEbullicionAgua;
     }
 
