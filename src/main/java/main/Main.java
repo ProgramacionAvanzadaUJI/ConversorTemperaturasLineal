@@ -12,8 +12,9 @@ public class Main {
 
     private void ejecuta() {
         TablaConversion tabla = new TablaConversion();
-        tabla.addConversor(new Conversor(new EscalaLineal(0, 100), new EscalaLineal(32, 212)));
-        tabla.addConversor(new Conversor(new EscalaLineal(0, 100), new EscalaLineal(0,80)));
+        EscalaLineal celsius = new EscalaLineal(0, 100);
+        tabla.addConversor(new Conversor(celsius, new EscalaLineal(32, 212)));
+        tabla.addConversor(new Conversor(celsius, new EscalaLineal(0,80)));
         System.out.println(tabla.tabla(0, 100, 5));
     }
 }
